@@ -6,10 +6,11 @@
   </head>
   <body>
     <h4>Pets app</h4>
+   <a href="/new_pet">Crea tu nuevo pet</a>
     <ol>
-      <% @pets.each do |pet| %>
+      <% @pets.each_with_index do |pet, index| %>
         <li>
-          <%= pet %>
+          <%= pet %> <a href="/edit_pet/<%=index%>">edita</a>
         </li>
       <% end %>
     </ol>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/pets" method="post">
+      <input type="hidden" name="_method" value="<%=@method%>"/>
+      <input type ="text" value= "<%= @pet%>" name="name" placeholder="Nombra tu pet">
+      <button type="submit"> Crear </button>
+    </form>
+  </body>
+</html>
