@@ -10,8 +10,14 @@
     <ol>
       <% @pets.each_with_index do |pet, index| %>
         <li>
-          <%= pet %> <a href="/edit_pet/<%=index%>">edita</a>
+          <%= pet %> <a href="/edit_pet/<%=index%>">editar</a>
+          <form class="" action="/pets" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="id" value="<%=index%>">
+            <button type="submit">Eliminar</button>
+          </form>
         </li>
+
       <% end %>
     </ol>
   </body>

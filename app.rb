@@ -25,8 +25,15 @@ get '/edit_pet/:id' do
 end
 
 patch '/pets' do
-  p params
  pets[params[:id].to_i]= params["name"]
  @pets = pets
  erb :index
+end
+
+delete '/pets' do
+  puts "Estamos en delete"
+  p request
+  pets.delete_at(params[:id].to_i)
+  @pets = pets
+  erb :index
 end
